@@ -16,10 +16,19 @@ public:
 		apt = 0;
 	}
 
-	void fill(std::string city, std::string street, int house, int apt) {
+	void set_city(std::string city) {
 		this->city = city;
+	}
+
+	void set_street(std::string street) {
 		this->street = street;
+	}
+
+	void set_house(int house) {
 		this->house = house;
+	}
+
+	void set_apt(int apt) {
 		this->apt = apt;
 	}
 
@@ -69,7 +78,10 @@ int main() {
 			file_in >> house;
 			file_in >> apt;
 
-			address[i].fill(city, street, house, apt);
+			address[i].set_city(city);
+			address[i].set_street(street);
+			address[i].set_house(house);
+			address[i].set_apt(apt);
 
 			i++;
 		}
